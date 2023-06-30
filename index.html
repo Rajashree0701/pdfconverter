@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF to Word Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .file-input {
+            display: none;
+        }
+        .file-label {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF to Word Converter</h1>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+        <label for="pdf_file" class="file-label">Choose a PDF file</label>
+        <input type="file" id="pdf_file" name="pdf_file" class="file-input" accept=".pdf" required>
+        <br>
+        <button type="submit" class="button">Convert</button>
+    </form>
+</body>
+</html>
